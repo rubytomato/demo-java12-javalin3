@@ -1,0 +1,1 @@
+DROP SCHEMA IF EXISTS sample_db;

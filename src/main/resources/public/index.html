@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/app/webjars/jquery/3.4.1/jquery.min.js"></script>
+    <title>static index</title>
+</head>
+<body>
+<div>
+    <h1>static index.html</h1>
+    <img src="/app/images/sample_1.png" />
+    <div id="main">
+    </div>
+</div>
+<script type="application/javascript">
+    //lang=javascript
+    $(window).on('load', function(e){
+        console.log(e);
+        $("#main").text("on load");
+    });
+</script>
+</body>
+</html>
