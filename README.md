@@ -1,4 +1,4 @@
-# javalin 3.4.1 demo application with JDK 13
+# javalin 3.7.0 demo application with JDK 13
 
 Development environment
 
@@ -23,13 +23,13 @@ mvn clean package
 ## run
 
 ```
-java -jar .\target\
+java -jar .\target\demo-java12-javalin3-1.0.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-Specify a locale
+### Specify a locale
 
 ```
-java -D -jar
+java -Duser.language=en -Duser.country=US -jar .\target\demo-java12-javalin3-1.0.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 ## database (MySQL)
@@ -69,16 +69,28 @@ CREATE INDEX idx_sex on user (sex) USING BTREE;
 CREATE INDEX idx_pref on user (prefecture_id) USING BTREE;
 ```
 
+### create model class with jooq
+
+```
+mvn jooq-codegen:generate
+```
+
 ## static page
 
-http://localhost:7000/app/
-http://localhost:7000/app/index.html
+* http://localhost:7000/app/
+* http://localhost:7000/app/index.html
 
 ## template page
 
-http://localhost:7000/app/hello
+* http://localhost:7000/app/hello
 
 ## api
 
-http://localhost:7000/app/api/users
-http://localhost:7000/app/api/user/1
+* http://localhost:7000/app/api/users
+* http://localhost:7000/app/api/user/1
+
+## overview
+
+using RouteOverviewPlugin
+
+* http://localhost:7000/overview
